@@ -9,7 +9,7 @@
  <li class="breadcrumb-item active">Create</li>
 </ol>
 <!-- breadcrumb End -->
-<!--@include('admin.layouts.partials.flash-message')-->
+@include('admin.layouts.partials.flash-message')
 
 <div class="card mb-3">
   <div class="card-header">Create User</div>
@@ -24,11 +24,12 @@
           <div class="card-body text-dark">
               <div class="form-group">
                 <label for="email">Email address</label>
-                <!--<input class="form-control" id="email" name="email" type="email" value="{{ old('email') ? old('email') : $item->email }}" aria-describedby="emailHelp" placeholder="Enter email">-->
-                <input class="form-control" id="email" name="email" type="email" value="" aria-describedby="emailHelp" placeholder="Enter email">
-                <!--@if ($errors->has('email'))
+                <input class="form-control" id="email" name="email" type="email" value="{{ old('email') ? old('email') : $item->email }}" aria-describedby="emailHelp" placeholder="Enter email"disable=>
+
+                <!--<input class="form-control" id="email" name="email" type="email" value="" aria-describedby="emailHelp" placeholder="Enter email">-->
+                @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
-                @endif-->
+                @endif
               </div>
 
               <div class="form-group">
@@ -56,14 +57,15 @@
         <div class="form-row">
           <div class="col-md-6">
             <label for="name">First name</label>
-            <input class="form-control" id="name" name="name" value="" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
+            <!--<input class="form-control" id="name" name="name" value="" type="text" aria-describedby="nameHelp" placeholder="Enter first name">-->
+            <input class="form-control" id="name" name="name" type="name" value="{{ old('name') ? old('name') : $item->name }}" aria-describedby="nameHelp" placeholder="Enter name">
 
 
           </div>
           <div class="col-md-6">
             <label for="surname">Last name</label>
-            <input class="form-control" id="surname" name="surname" value="" type="text" aria-describedby="nameHelp" placeholder="Enter last name">
-
+            <!--<input class="form-control" id="surname" name="surname" value="" type="text" aria-describedby="nameHelp" placeholder="Enter last name">-->
+            <input class="form-control" id="surname" name="surname" type="surname" value="{{ old('surname') ? old('surname') : $item->surname }}" aria-describedby="surnameHelp" placeholder="Enter surname">
 
           </div>
         </div>
@@ -73,14 +75,14 @@
         <div class="form-row">
           <div class="col-md-6">
             <label for="mobile">Mobile</label>
-            <input class="form-control" id="mobile" name="mobile" value="" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
-
+            <!--<input class="form-control" id="mobile" name="mobile" value="" type="text" aria-describedby="nameHelp" placeholder="Enter first name">-->
+            <input class="form-control" id="mobile" name="mobile" type="mobile" value="{{ old('mobile') ? old('mobile') : $item->mobile }}" aria-describedby="mobileHelp" placeholder="Enter mobile">
 
           </div>
           <div class="col-md-6">
             <label for="age">Age</label>
-            <input class="form-control" id="age" name="age" value="" type="text" aria-describedby="nameHelp" placeholder="Enter last name">
-
+            <!--<input class="form-control" id="age" name="age" value="" type="text" aria-describedby="nameHelp" placeholder="Enter last name">-->
+            <input class="form-control" id="age" name="age" type="age" value="{{ old('age') ? old('age') : $item->age }}" aria-describedby="ageHelp" placeholder="Enter age">
 
           </div>
         </div>
@@ -90,8 +92,8 @@
         <div class="form-row">
           <div class="col-md-6">
             <label for="address">Address</label>
-            <input class="form-control" id="address" name="address" value="" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
-
+            <!--<input class="form-control" id="address" name="address" value="" type="text" aria-describedby="nameHelp" placeholder="Enter first name">-->
+            <input class="form-control" id="address" name="address" type="address" value="{{ old('address') ? old('address') : $item->address }}" aria-describedby="addressHelp" placeholder="Enter address">
 
           </div>
           <div class="col-md-6">
