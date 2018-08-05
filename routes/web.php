@@ -41,7 +41,7 @@ Route::get('demonine/{id}/{name}', function ($id, $name) {
 //Route::resource('/testlinenoti', 'DemoController');
 Route::resource('photos', 'PhotoController');
 //Route::resource('admin/users', 'Admin\UsersController');
-Route::prefix('admin')->middleware('auth')->group(function () {
+Route::prefix('admin')->group(function () {
 
     Route::resource('users', 'Admin\UsersController');
     Route::get('demoone', 'DemoController@index');
